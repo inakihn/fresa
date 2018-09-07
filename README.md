@@ -1,5 +1,4 @@
 # fresa - Flowable REst Sample Application
-========
 
 ## Introduction
 
