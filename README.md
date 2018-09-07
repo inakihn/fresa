@@ -2,27 +2,37 @@
 
 ## Introduction
 
-A sample application using flowable rest api, based on spring boot.
+A sample application to showcase usage of the flowable rest api, based on `flowable-spring-boot-starter-rest`
 
 ## How to start the application
 
 ### Docker compose
 
-fresa uses mysql as database. In order to start the database, a `docker-compose.yml` file is provided
+fresa uses mysql as database, with a created user `flowable / flowable` on port `3306`. In order to start the database, a `docker-compose.yml` file is provided in the folder `docker/`
 
-To start the docker compose, you can use the `start-db.sh` script
+Scripts are provided to help starting, stopping and viewing database logs
 
-To stop the docker compose, you can use the `stop-db.sh` script
+Start docker compose
+
+```docker-start.sh```
+
+Stop docker compose
+
+```docker-stop.sh```
+
+View docker logs
+
+```docker-logs.sh```
 
 ### Spring boot application
 
 After starting docker compose you can start the application with your favourite IDE or directly from
-the command line using the command `mvn spring-boot:run`. After starting the application, it can be
-accessed on the url http://localhost:8080/fresa
+the command line using the command `mvn spring-boot:run`. The application can then be accessed on 
+the url http://localhost:8080/fresa
 
 
 #### Security
 
-A very simple security for all web requests is in place: `rest-admin / test`
+A very simple security for all web requests has been configured, using http-basic: `rest-admin / test`
 
  
