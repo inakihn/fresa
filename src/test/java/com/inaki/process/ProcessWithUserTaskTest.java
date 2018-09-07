@@ -35,6 +35,8 @@ public class ProcessWithUserTaskTest {
     @Deployment
     public void processWithUserTask() {
         RuntimeService runtimeService = flowableRule.getRuntimeService();
+
+
         runtimeService.startProcessInstanceByKey("process_with_usertask");
 
         List<ProcessInstance> processInstances = runtimeService.createProcessInstanceQuery().
